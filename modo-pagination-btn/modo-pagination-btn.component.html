@@ -1,0 +1,13 @@
+
+<div class="container" >
+  <div *ngFor="let user of getPaginatedUsers()" class="boxes">
+    {{ user.id }} - {{ user.name }}
+  </div>
+</div>
+
+<mat-paginator [length]="totalItems"
+               [pageSize]="itemsPorPagina"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="onPageChange($event)">
+</mat-paginator>
+

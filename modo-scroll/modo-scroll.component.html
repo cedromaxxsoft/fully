@@ -1,0 +1,5 @@
+<div class="container" infiniteScroll [infiniteScrollDistance]="0.5" (scrolled)="onScroll($event)">
+  <div *ngFor="let user of users" class="boxes">
+    {{ user.name }}
+  </div>
+</div>
